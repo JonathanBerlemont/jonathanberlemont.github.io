@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import Certificates from './sections/certificates.vue';
-import Experience from './sections/experience.vue';
-import Skills from './sections/skills.vue';
-import About from './sections/about.vue';
+import Certificates from './sections/Certificates.vue';
+import Experience from './sections/Experience.vue';
+import Skills from './sections/Skills.vue';
+import About from './sections/About.vue';
 </script>
 
 <template>

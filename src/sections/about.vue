@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import Greeblies from '@/components/greeblies.vue';
+import Greeblies from '@/components/Greeblies.vue';
 </script>
 
 <template>
