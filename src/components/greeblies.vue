@@ -27,6 +27,9 @@ const PAUSE_DURATION = 2500  // How long to display completed code
 
 function handleTyping() {
   const currentSnippet = codeSnippets[snippetIndex]
+  if(!currentSnippet) {
+    return;
+  }
   const fullText = currentSnippet.code
 
   if (!isDeleting) {
