@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-
+import experiences from "@/data/experiences.json";
 </script>
 
 <template>
@@ -15,6 +15,23 @@
              |_|                                    
         </pre>
     </div>
+
+    <div class="experiences">
+        <v-card
+            v-for="experience in experiences" 
+            :key="experience.title"
+            :title="experience.title"
+            :subtitle="`${experience.started} - ${experience.finished}`"
+            color="#00ff66"
+            variant="outlined"
+            class="mb-5"
+        >
+        <template #prepend>
+            <img :src="`/logos/${experience.logo}`" style="width: 150px;" />
+        </template>
+        </v-card>
+    </div>
+
 </template>
 
 <style scoped>
