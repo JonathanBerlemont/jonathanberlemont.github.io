@@ -16,24 +16,54 @@ import experiences from "@/data/experiences.json";
         </pre>
     </div>
 
-    <div class="experiences">
-        <v-card
-            v-for="experience in experiences" 
-            :key="experience.title"
-            :title="experience.title"
-            :subtitle="`${experience.started} - ${experience.finished}`"
-            color="#00ff66"
-            variant="outlined"
-            class="mb-5"
-        >
-        <template #prepend>
-            <img :src="`/logos/${experience.logo}`" style="width: 150px;" />
-        </template>
-        </v-card>
-    </div>
+        <div class="experiences">
+            <v-card
+                v-for="experience in experiences"
+                :key="experience.title"
+                color="#00ff66"
+                variant="outlined"
+                class="mb-5"
+            >
+                <template #append>
+                    <div style="border: 1px solid currentColor; border-radius: 5px; padding: 8px 12px; background-color: color-mix(in srgb, currentColor 15%, transparent);">
+                        <img :src="`/logos/${experience.logo}`" style="width: 120px; object-fit: contain;" />
+                    </div>
+                </template>
+
+                <template #title>
+                    {{ experience.title }}
+                </template>
+
+                <template #subtitle>
+                    {{ experience.company }} · {{ experience.started }} – {{ experience.finished }}
+                </template>
+
+                <v-card-text>
+                    <p class="mb-3">{{ experience.description }}</p>
+
+                    <ul class="bullets mb-3">
+                        <li v-for="bullet in experience.bullets" :key="bullet">
+                            {{ bullet }}
+                        </li>
+                    </ul>
+
+                    <div class="tags">
+                        <v-chip
+                            v-for="tag in experience.tags"
+                            :key="tag"
+                            size="small"
+                            variant="outlined"
+                            class="mr-1"
+                        >
+                            {{ tag }}
+                        </v-chip>
+                    </div>
+                </v-card-text>
+            </v-card>
+        </div>
 
 </template>
 
 <style scoped>
-    
+
 </style>

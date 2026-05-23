@@ -1,16 +1,29 @@
 [
     {
-        "title": "Drupal Developer",
+        "title": "Web Developer",
         "company": "Sciensano",
         "logo": "sciensano.png",
         "started": "April 2021",
-        "finished": "Now"
+        "finished": "Now",
+        "description": "Developed and maintained healthcare-related web applications in a small team, on systems that grew significantly in complexity and number over time.",
+        "bullets": [
+            "Identified the growing need for quality gates and structured testing as the codebase scaled",
+            "Experienced first-hand how complexity without quality gates leads to fragile systems — and became the person pushing to fix that"
+        ],
+        "tags": ["Drupal", "Laravel", "Nuxt", "CI/CD", "Unit Testing"]
     },
     {
         "title": "Totara Developer",
         "company": "Deloitte",
         "logo": "deloitte.png",
         "started": "July 2019",
-        "finished": "February 2021"
+        "finished": "February 2021",
+        "description": "Built and customised LMS platforms for enterprise clients using Totara in a fast-paced consulting environment.",
+        "bullets": [
+            "Delivered client-facing features across multiple concurrent projects under tight deadlines",
+            "Worked in a largely self-directed way with minimal QA process — which later shaped my appreciation for structured quality practices",
+            "Gained early exposure to enterprise-scale software delivery and client requirements"
+        ],
+        "tags": ["Totara", "PHP"]
     }
 ]
