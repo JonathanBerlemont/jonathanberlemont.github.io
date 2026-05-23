@@ -24,10 +24,14 @@ import certificates from '@/data/certificates.json';
             <template #prepend>
                 <img :src="`/logos/${certificate.logo}`" style="width: 50px; height: 50px; object-fit: contain;" />
             </template>
-            <template #append>
+            <template #append v-if="certificate.url.length > 0">
                 <a :href="certificate.url" target="_blank" rel="noopener noreferrer">
                     <v-icon icon="mdi-open-in-new" color="#00ff66" />
                 </a>
+            </template>
+            <template #append v-else>
+                <small>Soon</small>
+                <v-icon icon="mdi-loading" class="spinning" color="#00ff66" />
             </template>
         </v-card>
     </div>
@@ -37,8 +41,18 @@ import certificates from '@/data/certificates.json';
 .certificates {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    .v-card {
-        margin: 20px;
+    gap: 20px;
+    .v-card:deep(.v-card-title) {
+        white-space: normal;
+        word-break: break-word;
     }
+}
+.spinning {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 </style>
