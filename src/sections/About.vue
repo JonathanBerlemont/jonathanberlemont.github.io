@@ -4,16 +4,28 @@ import socials from '@/data/socials.json';
 </script>
 
 <template>
-    <h1 class="ascii-container">
+<h1 class="ascii-container">
+    <div class="ascii-line first">
         <pre class="ascii-text">
-       _                   _   _                   ____            _                            _   
-      | |                 | | | |                 |  _ \          | |                          | |  
-      | | ___  _ __   __ _| |_| |__   __ _ _ __   | |_) | ___ _ __| | ___ _ __ ___   ___  _ __ | |_ 
-  _   | |/ _ \| '_ \ / _` | __| '_ \ / _` | '_ \  |  _ < / _ \ '__| |/ _ \ '_ ` _ \ / _ \| '_ \| __|
- | |__| | (_) | | | | (_| | |_| | | | (_| | | | | | |_) |  __/ |  | |  __/ | | | | | (_) | | | | |_ 
-  \____/ \___/|_| |_|\__,_|\__|_| |_|\__,_|_| |_| |____/ \___|_|  |_|\___|_| |_| |_|\___/|_| |_|\__|
+       _                   _   _         
+      | |                 | | | |        
+      | | ___  _ __   __ _| |_| |__   __ _ _ __  
+  _   | |/ _ \| '_ \ / _` | __| '_ \ / _` | '_ \ 
+ | |__| | (_) | | | | (_| | |_| | | | (_| | | | |
+  \____/ \___/|_| |_|\__,_|\__|_| |_|\__,_|_| |_|
         </pre>
-    </h1>
+    </div>
+    <div class="ascii-line last">
+        <pre class="ascii-text">
+  ____            _                            _   
+ |  _ \          | |                          | |  
+ | |_) | ___ _ __| | ___ _ __ ___   ___  _ __ | |_ 
+ |  _ < / _ \ '__| |/ _ \ '_ ` _ \ / _ \| '_ \| __|
+ | |_) |  __/ |  | |  __/ | | | | | (_) | | | | |_ 
+ |____/ \___|_|  |_|\___|_| |_| |_|\___/|_| |_|\__|
+        </pre>
+    </div>
+</h1>
     <v-card variant="outlined" class="about-card">
         <div class="about">
             <p>6+ years building web applications — starting at Deloitte on LMS platforms, then 5 years at Sciensano developing healthcare software in a small team on increasingly complex systems.</p>
@@ -39,6 +51,23 @@ import socials from '@/data/socials.json';
 </template>
 
 <style scoped>
+.ascii-container {
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .ascii-container {
+        flex-direction: column;
+    }
+
+    .ascii-line.first {
+        transform: translateX(-15%);
+    }
+
+    .ascii-line.last {
+        transform: translateX(15%);
+    }
+}
 .about-card {
     display: grid;
     grid-template-columns: 2fr 1fr; 

@@ -52,7 +52,7 @@ import experiences from "@/data/experiences.json";
                         v-for="tag in experience.tags"
                         :key="tag"
                         size="small"
-                        class="mr-1"
+                        class="ma-1"
                     >
                         {{ tag }}
                     </v-chip>

@@ -41,7 +41,7 @@ import About from './sections/About.vue';
 
 @media (max-width: 768px) {
     .ascii-text {
-        font-size: 1.8vw;
+        font-size: 2.5vw;
     }
 }
 </style>
