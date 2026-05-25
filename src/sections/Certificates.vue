@@ -3,7 +3,7 @@ import certificates from '@/data/certificates.json';
 </script>
 
 <template>
-    <div class="ascii-container">
+    <h2 class="ascii-container">
         <pre class="ascii-text">
    _____          _   _  __ _           _   _                 
   / ____|        | | (_)/ _(_)         | | (_)                
@@ -12,7 +12,7 @@ import certificates from '@/data/certificates.json';
  | |___|  __/ |  | |_| | | | | (_| (_| | |_| | (_) | | | \__ \
   \_____\___|_|   \__|_|_| |_|\___\__,_|\__|_|\___/|_| |_|___/
         </pre>
-    </div>
+    </h2>
     <div class="certificates">
         <v-card
             v-for="certificate in certificates"

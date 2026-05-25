@@ -3,7 +3,7 @@ import skills from '@/data/skills.json';
 </script>
 
 <template>
-    <div class="ascii-container">
+    <h2 class="ascii-container">
         <pre class="ascii-text">
    _____ _    _ _ _     
   / ____| |  (_) | |    
@@ -12,8 +12,8 @@ import skills from '@/data/skills.json';
   ____) |   <| | | \__ \
  |_____/|_|\_\_|_|_|___/
         </pre>
-    </div>
-    <div class="d-flex flex-wrap ga-3">
+    </h2>
+    <div class="d-flex flex-wrap ga-3 justify-center">
         <v-chip
             v-for="skill, index in skills"
             :prepend-icon="index<5 ? 'mdi-star' : ''"

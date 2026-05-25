@@ -4,7 +4,7 @@ import socials from '@/data/socials.json';
 </script>
 
 <template>
-    <div class="ascii-container">
+    <h1 class="ascii-container">
         <pre class="ascii-text">
        _                   _   _                   ____            _                            _   
       | |                 | | | |                 |  _ \          | |                          | |  
@@ -13,13 +13,12 @@ import socials from '@/data/socials.json';
  | |__| | (_) | | | | (_| | |_| | | | (_| | | | | | |_) |  __/ |  | |  __/ | | | | | (_) | | | | |_ 
   \____/ \___/|_| |_|\__,_|\__|_| |_|\__,_|_| |_| |____/ \___|_|  |_|\___|_| |_| |_|\___/|_| |_|\__|
         </pre>
-    </div>
+    </h1>
     <v-card variant="outlined" class="about-card">
         <div class="about">
             <p>6+ years building web applications — starting at Deloitte on LMS platforms, then 5 years at Sciensano developing healthcare software in a small team on increasingly complex systems.</p>
             <p>It was at Sciensano that I developed a real interest in quality engineering: as the codebase and infrastructure grew, the need for proper monitoring, quality gates, and structured testing became impossible to ignore. I found myself drawn to that problem more than the development itself.</p>
             <p>Having worked on the development side, I understand how bugs are introduced, not just where to find them — which I believe makes me a stronger QA engineer than someone who hasn't.</p>
-            <p>I speak French and English fluently and have a basic understanding of Dutch.</p>
             <div class="socials d-flex flex-wrap ga-3">
                 <v-chip 
                     v-for="social in socials"
