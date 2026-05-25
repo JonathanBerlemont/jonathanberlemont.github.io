@@ -52,7 +52,6 @@ import experiences from "@/data/experiences.json";
                             v-for="tag in experience.tags"
                             :key="tag"
                             size="small"
-                            variant="outlined"
                             class="mr-1"
                         >
                             {{ tag }}

@@ -1,0 +1,26 @@
+[
+    {
+        "name": "LinkedIn",
+        "title": "LinkedIn",
+        "url": "https://www.linkedin.com/in/jonathan-berlemont-079207186/",
+        "icon": "mdi-linkedin"
+    },
+    {
+        "name": "Github",
+        "title": "Github",
+        "url": "https://github.com/JonathanBerlemont",
+        "icon": "mdi-github"
+    },
+    {
+        "name": "Email",
+        "title":"berlemontjonathan@gmail.com",
+        "url": "mailto:berlemontjonathan@gmail.com",
+        "icon": "mdi-email"
+    },
+    {
+        "name": "Phone",
+        "title": "+32 470 64 31 95",
+        "url": "tel:+32470643195",
+        "icon": "mdi-phone"
+    }
+]
