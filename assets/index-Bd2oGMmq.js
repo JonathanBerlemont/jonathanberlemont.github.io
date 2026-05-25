@@ -18,37 +18,44 @@ var e=Object.defineProperty,t=(t,n)=>{let r={};for(var i in t)e(r,i,{get:t[i],en
   \\___ \\| |/ / | | / __|
   ____) |   <| | | \\__ \\
  |_____/|_|\\_\\_|_|_|___/
-        `)],-1),U(`div`,sc,[(xa(!0),Ea(H,null,ti($t(oc),(e,t)=>(xa(),Da(n,{"prepend-icon":t<5?`mdi-star`:``,variant:t<5?`elevated`:`tonal`,key:e,color:`#00ff66`},{default:Rn(()=>[Fa(ye(e),1)]),_:2},1032,[`prepend-icon`,`variant`]))),128))])],64)}}}),[[`__scopeId`,`data-v-d43d4d93`]]),lc={class:`code-greeblie-container`},uc=40,dc=10,fc=2500,pc=Xs(wr({__name:`Greeblies`,setup(e){let t=[{code:`import { test, expect } from '@playwright/test';
+        `)],-1),U(`div`,sc,[(xa(!0),Ea(H,null,ti($t(oc),(e,t)=>(xa(),Da(n,{"prepend-icon":t<5?`mdi-star`:``,variant:t<5?`elevated`:`tonal`,key:e,color:`#00ff66`},{default:Rn(()=>[Fa(ye(e),1)]),_:2},1032,[`prepend-icon`,`variant`]))),128))])],64)}}}),[[`__scopeId`,`data-v-d43d4d93`]]),lc={class:`code-greeblie-container`},uc=20,dc=5,fc=2500,pc=Xs(wr({__name:`Greeblies`,setup(e){let t=[{code:`import { test, expect } from '@playwright/test';
 
-describe('QA Automation Pipeline', () => {
-  test('should pass regression form submission', async ({ page }) => {
-    await page.goto('/contact');
-    await page.getByLabel('Full Name').fill('QA Engineer');
-    await page.getByRole('button', { name: 'Submit' }).click();
-    
-    await expect(page.getByTestId('success-alert')).toBeVisible();
-  });
+test('jonathan: developer becomes QA engineer', async ({ page }) => {
+  await page.goto('/career');
+
+  await expect(page.getByTestId('role'))
+    .toHaveText('Web Developer');
+
+  await page.getByRole('button', { name: 'Change career' }).click();
+
+  await expect(page.getByTestId('role'))
+    .toHaveText('QA Engineer');
 });`},{code:`<?php
-namespace Drupal\\qa_insights\\Controller;
-
-use Drupal\\Core\\Controller\\ControllerBase;
-use Symfony\\Component\\HttpFoundation\\JsonResponse;
-
-class AuditReportController extends ControllerBase {
-  public function getLatestMetrics(): JsonResponse {
-    $data = ['status' => 'optimized', 'coverage' => 94.2];
-    return new JsonResponse($data);
+/**
+ * Implements hook_user_role_alter().
+ *
+ * Transitions a web developer into a QA engineer.
+ */
+function career_hook_user_role_alter(array &$roles, AccountInterface $account) {
+  if (in_array('web_developer', $roles)) {
+    unset($roles['web_developer']);
+    $roles['qa_engineer'] = TRUE;
+    $account->set('perspective', 'I know where bugs are born');
   }
-}`},{code:`import { ref, computed, watchEffect } from 'vue';
+}`},{code:`# .github/workflows/qa.yml
+name: QA Pipeline
 
-const totalErrors = ref(0);
-const systemStatus = computed(() => 
-  totalErrors.value === 0 ? 'Healthy' : 'Degraded'
-);
+on: [pull_request]
 
-watchEffect(() => {
-  if (totalErrors.value > 5) alertCriticalTelemetry();
-});`}],n=L(``),r=0,i=0,a=!1,o=null;function s(){let e=t[r];if(!e)return;let c=e.code;if(a)n.value=c.slice(0,i-1),i--,i===0&&(a=!1,r=(r+1)%t.length);else if(n.value=c.slice(0,i+1),i++,i===c.length){o=setTimeout(()=>{a=!0,s()},fc);return}o=setTimeout(s,a?dc:uc)}return Br(()=>{s()}),Wr(()=>{o&&clearTimeout(o)}),(e,t)=>(xa(),Ea(`div`,lc,[U(`pre`,null,[U(`code`,null,[Fa(ye(n.value),1),t[0]||=U(`span`,{class:`blinking-cursor`},`|`,-1)])])]))}}),[[`__scopeId`,`data-v-e0d43194`]]),mc=[{name:`LinkedIn`,title:`LinkedIn`,url:`https://www.linkedin.com/in/jonathan-berlemont-079207186/`,icon:`mdi-linkedin`},{name:`Github`,title:`Github`,url:`https://github.com/JonathanBerlemont`,icon:`mdi-github`},{name:`Email`,title:`berlemontjonathan@gmail.com`,url:`mailto:berlemontjonathan@gmail.com`,icon:`mdi-email`},{name:`Phone`,title:`+32 470 64 31 95`,url:`tel:+32470643195`,icon:`mdi-phone`}],hc={class:`about`},gc={class:`socials d-flex flex-wrap ga-3`},_c={class:`greeblies`},vc=Xs(wr({__name:`About`,setup(e){return(e,t)=>{let n=Xr(`v-chip`),r=Xr(`v-card`);return xa(),Ea(H,null,[t[3]||=U(`div`,{class:`ascii-container`},[U(`pre`,{class:`ascii-text`},`       _                   _   _                   ____            _                            _   
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+      - run: npm ci
+      - run: npx playwright install --with-deps
+      - run: npm run test:e2e`}],n=L(``),r=0,i=0,a=!1,o=null;function s(){let e=t[r];if(!e)return;let c=e.code;if(a)n.value=c.slice(0,i-1),i--,i===0&&(a=!1,r=(r+1)%t.length);else if(n.value=c.slice(0,i+1),i++,i===c.length){o=setTimeout(()=>{a=!0,s()},fc);return}o=setTimeout(s,a?dc:uc)}return Br(()=>{s()}),Wr(()=>{o&&clearTimeout(o)}),(e,t)=>(xa(),Ea(`div`,lc,[U(`pre`,null,[U(`code`,null,[Fa(ye(n.value),1),t[0]||=U(`span`,{class:`blinking-cursor`},`|`,-1)])])]))}}),[[`__scopeId`,`data-v-a7e05d76`]]),mc=[{name:`LinkedIn`,title:`LinkedIn`,url:`https://www.linkedin.com/in/jonathan-berlemont-079207186/`,icon:`mdi-linkedin`},{name:`Github`,title:`Github`,url:`https://github.com/JonathanBerlemont`,icon:`mdi-github`},{name:`Email`,title:`berlemontjonathan@gmail.com`,url:`mailto:berlemontjonathan@gmail.com`,icon:`mdi-email`},{name:`Phone`,title:`+32 470 64 31 95`,url:`tel:+32470643195`,icon:`mdi-phone`}],hc={class:`about`},gc={class:`socials d-flex flex-wrap ga-3`},_c={class:`greeblies`},vc=Xs(wr({__name:`About`,setup(e){return(e,t)=>{let n=Xr(`v-chip`),r=Xr(`v-card`);return xa(),Ea(H,null,[t[3]||=U(`div`,{class:`ascii-container`},[U(`pre`,{class:`ascii-text`},`       _                   _   _                   ____            _                            _   
       | |                 | | | |                 |  _ \\          | |                          | |  
       | | ___  _ __   __ _| |_| |__   __ _ _ __   | |_) | ___ _ __| | ___ _ __ ___   ___  _ __ | |_ 
   _   | |/ _ \\| '_ \\ / _\` | __| '_ \\ / _\` | '_ \\  |  _ < / _ \\ '__| |/ _ \\ '_ \` _ \\ / _ \\| '_ \\| __|
