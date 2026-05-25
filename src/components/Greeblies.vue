@@ -1,16 +1,15 @@
 <script lang="ts" setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 
-// Real, structural code snippets to cycle through
 const codeSnippets = [
-  { // Playwright 
-    code: `import { test, expect } from '@playwright/test';\n\ndescribe('QA Automation Pipeline', () => {\n  test('should pass regression form submission', async ({ page }) => {\n    await page.goto('/contact');\n    await page.getByLabel('Full Name').fill('QA Engineer');\n    await page.getByRole('button', { name: 'Submit' }).click();\n    \n    await expect(page.getByTestId('success-alert')).toBeVisible();\n  });\n});`
+  { // Playwright — the conversion
+    code: `import { test, expect } from '@playwright/test';\n\ntest('jonathan: developer becomes QA engineer', async ({ page }) => {\n  await page.goto('/career');\n\n  await expect(page.getByTestId('role'))\n    .toHaveText('Web Developer');\n\n  await page.getByRole('button', { name: 'Change career' }).click();\n\n  await expect(page.getByTestId('role'))\n    .toHaveText('QA Engineer');\n});`
   },
-  { // Drupal 10/11
-    code: `<?php\nnamespace Drupal\\qa_insights\\Controller;\n\nuse Drupal\\Core\\Controller\\ControllerBase;\nuse Symfony\\Component\\HttpFoundation\\JsonResponse;\n\nclass AuditReportController extends ControllerBase {\n  public function getLatestMetrics(): JsonResponse {\n    $data = ['status' => 'optimized', 'coverage' => 94.2];\n    return new JsonResponse($data);\n  }\n}`
+  { // Drupal hook — the career pivot
+    code: `<?php\n/**\n * Implements hook_user_role_alter().\n *\n * Transitions a web developer into a QA engineer.\n */\nfunction career_hook_user_role_alter(array &$roles, AccountInterface $account) {\n  if (in_array('web_developer', $roles)) {\n    unset($roles['web_developer']);\n    $roles['qa_engineer'] = TRUE;\n    $account->set('perspective', 'I know where bugs are born');\n  }\n}`
   },
-  { // Vue 3.5 
-    code: `import { ref, computed, watchEffect } from 'vue';\n\nconst totalErrors = ref(0);\nconst systemStatus = computed(() => \n  totalErrors.value === 0 ? 'Healthy' : 'Degraded'\n);\n\nwatchEffect(() => {\n  if (totalErrors.value > 5) alertCriticalTelemetry();\n});`
+  { // GitHub Actions CI
+    code: `# .github/workflows/qa.yml\nname: QA Pipeline\n\non: [pull_request]\n\njobs:\n  test:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      - uses: actions/setup-node@v4\n      - run: npm ci\n      - run: npx playwright install --with-deps\n      - run: npm run test:e2e`
   },
 ]
 
@@ -21,8 +20,8 @@ let charIndex = 0
 let isDeleting = false
 let timeoutId: ReturnType<typeof setTimeout> | null = null
 
-const TYPING_SPEED = 40      // ms per character when typing
-const DELETING_SPEED = 10    // ms per character when erasing
+const TYPING_SPEED = 20      // ms per character when typing
+const DELETING_SPEED = 5    // ms per character when erasing
 const PAUSE_DURATION = 2500  // How long to display completed code
 
 function handleTyping() {
@@ -87,7 +86,7 @@ onUnmounted(() => {
   font-size: 0.85rem;
   line-height: 1.5;
   height: 100%;
-  height: 350px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   position: relative;
