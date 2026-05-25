@@ -13,13 +13,12 @@ import skills from '@/data/skills.json';
  |_____/|_|\_\_|_|_|___/
         </pre>
     </div>
-    <div class="d-flex flex-wrap ga-2">
+    <div class="d-flex flex-wrap ga-3">
         <v-chip
             v-for="skill, index in skills"
             :prepend-icon="index<5 ? 'mdi-star' : ''"
             :variant="index<5 ? 'elevated' : 'tonal'"
             :key="skill"
-            class="ma-2"
             color="#00ff66"
             >
             {{ skill }}
