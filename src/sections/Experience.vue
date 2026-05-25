@@ -25,7 +25,7 @@ import experiences from "@/data/experiences.json";
             class="mb-5"
         >
             <template #append>
-                <div style="border: 1px solid currentColor; border-radius: 5px; padding: 8px 12px; background-color: color-mix(in srgb, currentColor 15%, transparent);">
+                <div class="company-logo" style="border: 1px solid currentColor; border-radius: 5px; padding: 8px 12px; background-color: color-mix(in srgb, currentColor 15%, transparent);">
                     <img :src="`/logos/${experience.logo}`" style="width: 120px; object-fit: contain;" />
                 </div>
             </template>
@@ -64,5 +64,9 @@ import experiences from "@/data/experiences.json";
 </template>
 
 <style scoped>
-
+@media (max-width: 768px) {
+    .v-card .company-logo {
+        display: none;
+    }
+}
 </style>

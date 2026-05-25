@@ -55,4 +55,10 @@ import certificates from '@/data/certificates.json';
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
 }
+
+@media (max-width: 768px) {
+    .certificates {
+        grid-template-columns: 1fr;
+    }
+}
 </style>

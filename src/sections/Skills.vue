@@ -25,9 +25,3 @@ import skills from '@/data/skills.json';
         </v-chip>
     </div>
 </template>
-
-<style scoped>
-    h1 {
-        text-align: center;
-    }
-</style>

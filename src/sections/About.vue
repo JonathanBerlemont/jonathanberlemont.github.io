@@ -32,7 +32,7 @@ import socials from '@/data/socials.json';
                 </v-chip>
             </div>
         </div>
-        <div class="greeblies">
+        <div class="greeblies d-none d-md-block">
             <Greeblies />
         </div>
     </v-card>
@@ -57,6 +57,11 @@ import socials from '@/data/socials.json';
                 }
             }
         }
+    }
+}
+@media (max-width: 768px) {
+    .about-card {
+        grid-template-columns: 1fr;
     }
 }
 </style>

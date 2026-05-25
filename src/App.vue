@@ -33,9 +33,15 @@ import About from './sections/About.vue';
 .ascii-text {
   color: #00ff66;
   text-shadow: 0 0 8px rgba(0, 255, 102, 0.65);
-  font-size: 0.60vw;
+  font-size: 0.6vw;
   line-height: 1.0; 
   letter-spacing: -0.05em; 
   white-space: pre;
+}
+
+@media (max-width: 768px) {
+    .ascii-text {
+        font-size: 1.8vw;
+    }
 }
 </style>
