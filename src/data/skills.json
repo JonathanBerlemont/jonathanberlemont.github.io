@@ -1,18 +1,16 @@
 [
-    "Drupal  8 => 11",
+    "Drupal",
     "Playwright",
-    "Nuxt 3",
-    "Unit Tests",
+    "PHPUnit",
     "Postman",
+    "Nuxt",
     "Cypress",
-    "PHP",
-    "Typescript",
-    "Vue 2, 3",
-    "Docker",
-    "Kubernetes",
+    "Vue",
     "CI/CD",
     "Azure DevOps",
     "Agile",
     "Totara",
-    "Sentry"
+    "Sentry",
+    "Docker",
+    "Kubernetes"
 ]

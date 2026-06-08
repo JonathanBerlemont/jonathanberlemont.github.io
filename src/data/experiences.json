@@ -10,7 +10,7 @@
             "Identified the growing need for quality gates and structured testing as the codebase scaled",
             "Experienced first-hand how complexity without quality gates leads to fragile systems — and became the person pushing to fix that"
         ],
-        "tags": ["Drupal", "Laravel", "Nuxt", "CI/CD", "Unit Testing"]
+        "tags": ["Drupal", "Laravel", "Nuxt", "CI/CD", "Unit Testing", "Automated Testing"]
     },
     {
         "title": "Totara Developer",

@@ -3,6 +3,7 @@ import Certificates from './sections/Certificates.vue';
 import Experience from './sections/Experience.vue';
 import Skills from './sections/Skills.vue';
 import About from './sections/About.vue';
+import Projects from './sections/Projects.vue';
 </script>
 
 <template>
@@ -11,6 +12,7 @@ import About from './sections/About.vue';
       <v-container>
         <About />
         <Skills />
+        <Projects />
         <Certificates />
         <Experience />
       </v-container>

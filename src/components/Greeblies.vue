@@ -85,8 +85,7 @@ onUnmounted(() => {
   font-family: 'Fira Code', 'Courier New', Courier, monospace;
   font-size: 0.85rem;
   line-height: 1.5;
-  height: 100%;
-  height: 400px;
+  min-height: 400px;
   display: flex;
   flex-direction: column;
   position: relative;

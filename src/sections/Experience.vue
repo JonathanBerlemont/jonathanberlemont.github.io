@@ -69,4 +69,7 @@ import experiences from "@/data/experiences.json";
         display: none;
     }
 }
+p, ul {
+    color: white;
+}
 </style>

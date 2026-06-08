@@ -1,0 +1,18 @@
+[
+    { 
+        "title": "Test plan", 
+        "tags": ["Playwright", "Drupal"],
+        "description": "Writing of a test plan following a template for a project I worked on as a developer during my time at Sciensano. Attention is given to the automation of tests, which is then implemented in the following project.",
+        "link": "/files/Test_Plan_V1.docx",
+        "link_text": "Docx file",
+        "type": "file"
+    },
+    { 
+        "title": "Playwright setup", 
+        "tags": ["Playwright", "Cross-browser testing", "Page Object Model", "Data Driven Testing"],
+        "description": "This is a setup of a Playwright project for a Drupal application using the Page Object Model and the Data Driven Testing methodology. The project tests the full CRUD of every content types available on this Drupal instance for varying user roles.",
+        "link": "https://github.com/JonathanBerlemont/playwright-test",
+        "link_text": "Github link",
+        "type": "link"
+    }
+]

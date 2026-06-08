@@ -28,9 +28,9 @@ import socials from '@/data/socials.json';
 </h1>
     <v-card variant="outlined" class="about-card">
         <div class="about">
-            <p>6+ years building web applications — starting at Deloitte on LMS platforms, then 5 years at Sciensano developing healthcare software in a small team on increasingly complex systems.</p>
-            <p>It was at Sciensano that I developed a real interest in quality engineering: as the codebase and infrastructure grew, the need for proper monitoring, quality gates, and structured testing became impossible to ignore. I found myself drawn to that problem more than the development itself.</p>
-            <p>Having worked on the development side, I understand how bugs are introduced, not just where to find them — which I believe makes me a stronger QA engineer than someone who hasn't.</p>
+            <p>I have over 6 years of experience building web applications, starting at Deloitte where I worked on LMS platforms, followed by 5 years at Sciensano developing healthcare software within a small team and contributing to increasingly complex systems.</p>
+            <p>It was at Sciensano that I developed a real interest in quality engineering: as the amount of projects grew and their infrastructures became more and more complex, the need for proper monitoring and structured testing became increasingly apparent. I found myself more interested in solving those challenges than in feature development itself.</p>
+            <p>My background as a developer gives me a perspective that many non-technical testers do not have. I understand how defects are introduced, where they are likely to occur, and how developers approach debugging. This allows me to collaborate effectively with development teams and provide the detailed, actionable information I know they need to resolve issues efficiently.</p>
             <div class="socials d-flex flex-wrap ga-3">
                 <v-chip 
                     v-for="social in socials"
