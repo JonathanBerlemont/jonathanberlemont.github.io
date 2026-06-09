@@ -1,6 +1,10 @@
 <script lang="ts" setup>
 import Greeblies from '@/components/Greeblies.vue';
 import socials from '@/data/socials.json';
+
+function handleSocialClick(url: string) {
+    window.open(atob(url), '_blank', 'noopener,noreferrer');
+}
 </script>
 
 <template>
@@ -35,12 +39,11 @@ import socials from '@/data/socials.json';
                 <v-chip 
                     v-for="social in socials"
                     :key="social.name"
-                    :href="social.url"
                     :prepend-icon="social.icon"
                     color="#00ff66"
-                    target="_blank"
+                    @click="handleSocialClick(social.url)"
                 >
-                {{ social.title }}
+                {{ social.name }}
                 </v-chip>
             </div>
         </div>

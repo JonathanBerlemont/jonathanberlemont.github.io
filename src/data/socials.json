@@ -1,26 +1,22 @@
 [
     {
         "name": "LinkedIn",
-        "title": "LinkedIn",
-        "url": "https://www.linkedin.com/in/jonathan-berlemont-079207186/",
+        "url": "aHR0cHM6Ly93d3cubGlua2VkaW4uY29tL2luL2pvbmF0aGFuLWJlcmxlbW9udC0wNzkyMDcxODYv",
         "icon": "mdi-linkedin"
     },
     {
         "name": "Github",
-        "title": "Github",
-        "url": "https://github.com/JonathanBerlemont",
+        "url": "aHR0cHM6Ly9naXRodWIuY29tL0pvbmF0aGFuQmVybGVtb250",
         "icon": "mdi-github"
     },
     {
         "name": "Email",
-        "title":"berlemontjonathan@gmail.com",
-        "url": "mailto:berlemontjonathan@gmail.com",
+        "url": "bWFpbHRvOmJlcmxlbW9udGpvbmF0aGFuQGdtYWlsLmNvbQ==",
         "icon": "mdi-email"
     },
     {
         "name": "Phone",
-        "title": "+32 470 64 31 95",
-        "url": "tel:+32470643195",
+        "url": "dGVsOiszMjQ3MDY0MzE5NQ==",
         "icon": "mdi-phone"
     }
 ]

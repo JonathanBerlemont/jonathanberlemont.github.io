@@ -22,7 +22,6 @@ import projects from "@/data/projects.json";
             :key="project.title"
             color="#00ff66"
             variant="outlined"
-            class="mb-5"
         >
             <template #title>
                 {{ project.title }}
@@ -56,4 +55,14 @@ import projects from "@/data/projects.json";
 p {
     color: white;
 }
+
+.projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+}
+
 </style>
