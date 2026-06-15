@@ -37,7 +37,7 @@ import projects from "@/data/projects.json";
             <v-card-text class="d-flex flex-column">
                 <p class="mb-3">{{ project.description }}</p>
 
-                <tag-list :tags="project.tags" />
+                <TagList :tags="project.tags" />
             </v-card-text>
         </v-card>
     </div>

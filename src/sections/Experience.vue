@@ -85,7 +85,7 @@ import experiences from "@/data/experiences.json";
                     </v-card>
                 </v-dialog>
 
-                <tag-list :tags="experience.tags" />
+                <TagList :tags="experience.tags" />
 
             </v-card-text>
         </v-card>
