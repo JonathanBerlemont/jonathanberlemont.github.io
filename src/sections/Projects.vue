@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import TagList from "@/components/TagList.vue";
 import projects from "@/data/projects.json";
 </script>
 
@@ -32,19 +33,10 @@ import projects from "@/data/projects.json";
                 </v-btn>
             </template>
 
-            <v-card-text>
+            <v-card-text class="d-flex flex-column">
                 <p class="mb-3">{{ project.description }}</p>
 
-                <div class="tags">
-                    <v-chip
-                        v-for="tag in project.tags"
-                        :key="tag"
-                        size="small"
-                        class="ma-1"
-                    >
-                        {{ tag }}
-                    </v-chip>
-                </div>
+                <tag-list :tags="project.tags" />
             </v-card-text>
         </v-card>
     </div>
@@ -65,4 +57,14 @@ p {
     }
 }
 
+.projects :deep(.v-card) {
+    display: flex;
+    flex-direction: column;
+}
+
+.projects :deep(.v-card-text) {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
 </style>

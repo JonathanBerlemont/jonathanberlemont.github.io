@@ -5,12 +5,21 @@
         "logo": "sciensano.png",
         "started": "April 2021",
         "finished": "Now",
-        "description": "Developed and maintained healthcare-related web applications in a small team, on systems that grew significantly in complexity and number over time.",
+        "description": "Developed and maintained numerous healthcare-related web applications in a team of 2 people using agile methodologies. Most things were developed together with my one colleague, not counting analysts and the occasional tester. I also occasionaly developed some projects on my own.",
         "bullets": [
-            "Identified the growing need for quality gates and structured testing as the codebase scaled",
-            "Experienced first-hand how complexity without quality gates leads to fragile systems — and became the person pushing to fix that"
+            "Setup of CI/CD pipelines within Azure DevOps.",
+            "Setup of Kubernetes/Docker environments in close collaboration with the other teams.",
+            "Development of a completely modular dashboard that would analyze our Drupal instances and flag configs that aren't aligned with company's standards.",
+            "Pushed for the integration of tests for standard features within all of our Drupal instances.",
+            "Migrations of many Drupal 7 platforms towards Drupal 10."
         ],
-        "tags": ["Drupal", "Laravel", "Nuxt", "CI/CD", "Unit Testing", "Automated Testing"]
+        "tags": ["Drupal", "Laravel", "Nuxt", "CI/CD", "Unit Testing", "Automated Testing"],
+        "highlights": [
+            {"url":"https://www.japcm.eu", "description": "Drupal platform commissioned by the EU. Its purpose is to group information on a continental scale about everything related to cancer from various institutions. It makes good use of the modular and highly dynamic content management capabilities of Drupal."},
+            {"url":"https://www.mosquitosurveillance.be", "description": "Drupal platform used to monitor Tiger Mosquito activity in the country. Many neat VueJS interfaces were built and added to this Drupal instance through Drupal modules in order to get a satisfying UX, as much for users as for admins."},
+            {"url": "https://food-environment.sciensano.be/", "description": "Nuxt platform used to showcase disparities regarding access to good quality food in different areas of Belgium. The challenge was to display and play with our huge amount of data in a reactive manner while being serverless."},
+            {"url":"https://epayment.sciensano.be/", "description": "Laravel platform used to pay Sciensano's invoices. The key interest was the integration of Worldline's APIs. it was a solo project. I was on my own for the whole duration of the project except for the review by a tester near the end."}
+        ]
     },
     {
         "title": "Totara Developer",
@@ -20,9 +29,9 @@
         "finished": "February 2021",
         "description": "Built and customised LMS platforms for enterprise clients using Totara in a fast-paced consulting environment.",
         "bullets": [
-            "Delivered client-facing features across multiple concurrent projects under tight deadlines",
-            "Worked in a largely self-directed way with minimal QA process — which later shaped my appreciation for structured quality practices",
-            "Gained early exposure to enterprise-scale software delivery and client requirements"
+            "Delivered client-facing features across multiple concurrent projects under tight deadlines.",
+            "Worked in a largely self-directed way with minimal QA process — which later shaped my appreciation for structured quality practices.",
+            "Gained early exposure to enterprise-scale software delivery and client requirements."
         ],
         "tags": ["Totara", "PHP"]
     }

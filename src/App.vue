@@ -11,10 +11,10 @@ import Projects from './sections/Projects.vue';
     <v-main>
       <v-container>
         <About />
+        <Experience />
         <Skills />
         <Projects />
         <Certificates />
-        <Experience />
       </v-container>
     </v-main>
   </v-app>

@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import TagList from "@/components/TagList.vue";
 import experiences from "@/data/experiences.json";
 </script>
 
@@ -46,17 +47,45 @@ import experiences from "@/data/experiences.json";
                         {{ bullet }}
                     </li>
                 </ul>
+                
+                <v-dialog max-width="800" v-if="experience.highlights">
+                    <template #activator="{ props }">
+                        <v-btn color="#00ff66" variant="outlined" class="mb-3" v-bind="props" append-icon="mdi-creation">
+                            Projects Highlights
+                        </v-btn>
+                    </template>
 
-                <div class="tags">
-                    <v-chip
-                        v-for="tag in experience.tags"
-                        :key="tag"
-                        size="small"
-                        class="ma-1"
-                    >
-                        {{ tag }}
-                    </v-chip>
-                </div>
+                    <v-card color="#00ff66" variant="outlined" class="highlight-card">
+                        <template #title>
+                            {{ experience.company }} — Highlights
+                        </template>
+                        <v-card-text>
+                            <ul>
+                                <li
+                                    v-for="highlight in experience.highlights" 
+                                    :key="highlight.url"
+                                    class="mb-5"
+                                >
+                                    <v-btn
+                                        :href="highlight.url"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        variant="outlined"
+                                        color="#00ff66"
+                                        append-icon="mdi-open-in-new"
+                                    >
+                                        {{highlight.url }}
+                                    </v-btn>
+                                    <p>{{ highlight.description }}</p>
+                                </li>
+                            </ul>
+                            
+                        </v-card-text>
+                    </v-card>
+                </v-dialog>
+
+                <tag-list :tags="experience.tags" />
+
             </v-card-text>
         </v-card>
     </div>
@@ -71,5 +100,14 @@ import experiences from "@/data/experiences.json";
 }
 p, ul {
     color: white;
+}
+.highlight-card {
+    background-color: black;
+    ul {
+        list-style: none;
+        padding-left: 0;
+
+        li:not(:last-child) { border-bottom: solid 1px #006633; }
+    }
 }
 </style>
