@@ -75,7 +75,7 @@ import experiences from "@/data/experiences.json";
                                         color="#00ff66"
                                         append-icon="mdi-open-in-new"
                                     >
-                                        {{highlight.url }}
+                                        {{ highlight.url }}
                                     </v-btn>
                                     <p>{{ highlight.description }}</p>
                                 </li>

@@ -13,7 +13,7 @@
             "Pushed for the integration of tests for standard features within all of our Drupal instances.",
             "Migrations of many Drupal 7 platforms towards Drupal 10."
         ],
-        "tags": ["Drupal", "Laravel", "Nuxt", "CI/CD", "Unit Testing", "Automated Testing"],
+        "tags": ["Drupal", "Laravel", "Nuxt", "Vue", "CI/CD", "Unit Testing", "Automated Testing"],
         "highlights": [
             {"url":"https://www.japcm.eu", "description": "Drupal platform commissioned by the EU. Its purpose is to group information on a continental scale about everything related to cancer from various institutions. It makes good use of the modular and highly dynamic content management capabilities of Drupal."},
             {"url":"https://www.mosquitosurveillance.be", "description": "Drupal platform used to monitor Tiger Mosquito activity in the country. Many neat VueJS interfaces were built and added to this Drupal instance through Drupal modules in order to get a satisfying UX, as much for users as for admins."},
@@ -33,6 +33,6 @@
             "Worked in a largely self-directed way with minimal QA process — which later shaped my appreciation for structured quality practices.",
             "Gained early exposure to enterprise-scale software delivery and client requirements."
         ],
-        "tags": ["Totara", "PHP"]
+        "tags": ["Totara", "PHP", "Javascript"]
     }
 ]
