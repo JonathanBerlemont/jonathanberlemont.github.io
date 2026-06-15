@@ -2,21 +2,31 @@
     {
         "name": "LinkedIn",
         "url": "aHR0cHM6Ly93d3cubGlua2VkaW4uY29tL2luL2pvbmF0aGFuLWJlcmxlbW9udC0wNzkyMDcxODYv",
-        "icon": "mdi-linkedin"
+        "icon": "mdi-linkedin",
+        "encoded": true
     },
     {
         "name": "Github",
         "url": "aHR0cHM6Ly9naXRodWIuY29tL0pvbmF0aGFuQmVybGVtb250",
-        "icon": "mdi-github"
+        "icon": "mdi-github",
+        "encoded": true
     },
     {
         "name": "Email",
         "url": "bWFpbHRvOmJlcmxlbW9udGpvbmF0aGFuQGdtYWlsLmNvbQ==",
-        "icon": "mdi-email"
+        "icon": "mdi-email",
+        "encoded": true
     },
     {
         "name": "Phone",
         "url": "dGVsOiszMjQ3MDY0MzE5NQ==",
-        "icon": "mdi-phone"
+        "icon": "mdi-phone",
+        "encoded": true
+    },
+    {
+        "name": "CV",
+        "url": "/files/CV_jonathanberlemont.docx",
+        "icon": "mdi-file",
+        "encoded": false
     }
 ]

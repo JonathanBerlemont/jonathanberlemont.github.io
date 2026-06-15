@@ -2,8 +2,9 @@
 import Greeblies from '@/components/Greeblies.vue';
 import socials from '@/data/socials.json';
 
-function handleSocialClick(url: string) {
-    window.open(atob(url), '_blank', 'noopener,noreferrer');
+function handleSocialClick(social: { url: string; encoded: boolean }) {
+  const url = social.encoded ? atob(social.url) : social.url;
+  window.open(url, '_blank', 'noopener,noreferrer');
 }
 </script>
 
@@ -42,7 +43,7 @@ function handleSocialClick(url: string) {
                     :key="social.name"
                     :prepend-icon="social.icon"
                     color="#00ff66"
-                    @click="handleSocialClick(social.url)"
+                    @click="handleSocialClick(social)"
                 >
                 {{ social.name }}
                 </v-chip>
