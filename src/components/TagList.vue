@@ -1,9 +1,8 @@
 <script setup lang="ts">
-defineProps({
-  tags: {
-    type: Array,
-    default: () => []
-  }
+withDefaults(defineProps<{
+  tags: string[]
+}>(), {
+  tags: () => []
 })
 </script>
 
