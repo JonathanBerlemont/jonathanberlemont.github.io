@@ -1,6 +1,41 @@
 <script lang="ts" setup>
 import TagList from "@/components/TagList.vue";
 import experiences from "@/data/experiences.json";
+
+const MONTHS: Record<string, number> = {
+  "January":0, 
+  "February":1, 
+  "March":2, 
+  "April":3, 
+  "May":4, 
+  "June":5,
+  "July":6, 
+  "August":7, 
+  "September":8, 
+  "October":9, 
+  "November":10, 
+  "December":11
+};
+
+function calcDuration(start: string, end: string) {
+  const parseDate = (str:string) => {
+    if (str === "Now") return new Date();
+    const [month, year] = str.split(" ");
+    if(!month || !year) {
+        return new Date();
+    }
+    return new Date(parseInt(year), MONTHS[month] ?? 0, 1);
+  };
+  const s = parseDate(start);
+  const e = parseDate(end);
+  let months = (e.getFullYear() - s.getFullYear()) * 12 + (e.getMonth() - s.getMonth());
+  const years = Math.floor(months / 12);
+  const rem = months % 12;
+  let parts = [];
+  if (years > 0) parts.push(years + (years === 1 ? " year" : " years"));
+  if (rem > 0) parts.push(rem + " months");
+  return parts.join(" ") || "< 1 months";
+}
 </script>
 
 <template>
@@ -38,6 +73,9 @@ import experiences from "@/data/experiences.json";
 
             <template #subtitle>
                 {{ experience.company }} · {{ experience.started }} – {{ experience.finished }}
+                <v-chip size="small" variant="outlined" class="ml-2">
+                    {{ calcDuration(experience.started, experience.finished) }}
+                </v-chip>
             </template>
 
             <v-card-text>
