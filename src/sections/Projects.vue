@@ -5,7 +5,8 @@ import projects from "@/data/projects.json";
 
 <template>
     <h2 class="ascii-container">
-        <pre class="ascii-text">
+        <span class="d-sr-only">QA Artifacts</span>
+        <pre class="ascii-text" aria-hidden="true">
    ____                               _   _  __           _       
   / __ \     /\            /\        | | (_)/ _|         | |      
  | |  | |   /  \          /  \   _ __| |_ _| |_ __ _  ___| |_ ___ 

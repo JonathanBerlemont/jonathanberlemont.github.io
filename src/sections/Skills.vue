@@ -4,7 +4,8 @@ import skills from '@/data/skills.json';
 
 <template>
     <h2 class="ascii-container">
-        <pre class="ascii-text">
+        <span class="d-sr-only">Skills</span>
+        <pre class="ascii-text" aria-hidden="true">
    _____ _    _ _ _     
   / ____| |  (_) | |    
  | (___ | | ___| | |___ 

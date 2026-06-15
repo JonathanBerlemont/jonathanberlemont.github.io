@@ -9,7 +9,8 @@ function handleSocialClick(url: string) {
 
 <template>
 <h1 class="ascii-container">
-    <div class="ascii-line first">
+    <span class="d-sr-only">Jonathan Berlemont</span>
+    <div class="ascii-line first" aria-hidden="true">
         <pre class="ascii-text">
        _                   _   _         
       | |                 | | | |        

@@ -4,7 +4,8 @@ import certificates from '@/data/certificates.json';
 
 <template>
     <h2 class="ascii-container">
-        <pre class="ascii-text">
+        <span class="d-sr-only">Certificates</span>
+        <pre class="ascii-text" aria-hidden="true">
    _____          _   _  __ _           _   _                 
   / ____|        | | (_)/ _(_)         | | (_)                
  | |     ___ _ __| |_ _| |_ _  ___ __ _| |_ _  ___  _ __  ___ 

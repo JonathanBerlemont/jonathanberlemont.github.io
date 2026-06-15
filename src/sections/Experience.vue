@@ -5,7 +5,8 @@ import experiences from "@/data/experiences.json";
 
 <template>
     <h2 class="ascii-container">
-        <pre class="ascii-text">
+        <span class="d-sr-only">Experience</span>
+        <pre class="ascii-text" aria-hidden="true">
   ______                      _                     
  |  ____|                    (_)                    
  | |__  __  ___ __   ___ _ __ _  ___ _ __   ___ ___ 
