@@ -3,7 +3,7 @@ import certificates from '@/data/certificates.json';
 </script>
 
 <template>
-    <h2 class="ascii-container">
+    <h2 class="ascii-container" title="Certifications">
         <span class="d-sr-only">Certificates</span>
         <pre class="ascii-text" aria-hidden="true">
    _____          _   _  __ _           _   _                 

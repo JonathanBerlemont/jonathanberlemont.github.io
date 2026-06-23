@@ -4,7 +4,7 @@ import projects from "@/data/projects.json";
 </script>
 
 <template>
-    <h2 class="ascii-container">
+    <h2 class="ascii-container" title="QA Artifacts">
         <span class="d-sr-only">QA Artifacts</span>
         <pre class="ascii-text" aria-hidden="true">
    ____                               _   _  __           _       

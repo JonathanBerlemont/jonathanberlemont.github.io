@@ -39,7 +39,7 @@ function calcDuration(start: string, end: string) {
 </script>
 
 <template>
-    <h2 class="ascii-container">
+    <h2 class="ascii-container" title="Experience">
         <span class="d-sr-only">Experience</span>
         <pre class="ascii-text" aria-hidden="true">
   ______                      _                     

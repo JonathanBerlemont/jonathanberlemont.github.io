@@ -9,7 +9,7 @@ function handleSocialClick(social: { url: string; encoded: boolean }) {
 </script>
 
 <template>
-<h1 class="ascii-container">
+<h1 class="ascii-container" title="Jonathan Berlemont">
     <span class="d-sr-only">Jonathan Berlemont</span>
     <div class="ascii-line first" aria-hidden="true">
         <pre class="ascii-text">

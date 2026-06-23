@@ -3,7 +3,7 @@ import skills from '@/data/skills.json';
 </script>
 
 <template>
-    <h2 class="ascii-container">
+    <h2 class="ascii-container" title="Skills">
         <span class="d-sr-only">Skills</span>
         <pre class="ascii-text" aria-hidden="true">
    _____ _    _ _ _     
