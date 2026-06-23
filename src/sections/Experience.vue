@@ -62,7 +62,7 @@ function calcDuration(start: string, end: string) {
             class="mb-5"
         >
             <template #append>
-                <div class="company-logo" style="border: 1px solid currentColor; border-radius: 5px; padding: 8px 12px; background-color: color-mix(in srgb, currentColor 15%, transparent);">
+                <div class="company-logo" style="border: 1px solid currentColor; border-radius: 5px; padding: 8px 12px; background-color: white;">
                     <img :src="`/logos/${experience.logo}`" style="width: 120px; object-fit: contain;" />
                 </div>
             </template>
